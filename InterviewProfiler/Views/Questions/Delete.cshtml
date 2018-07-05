@@ -1,0 +1,63 @@
+﻿@model InterviewProfiler.Models.Question
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Question</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer50)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Answer50)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer100)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Answer100)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Meta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Meta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Modified)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Modified)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Skill)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Skill.Name)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="QuestionId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

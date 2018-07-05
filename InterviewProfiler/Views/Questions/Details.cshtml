@@ -1,0 +1,60 @@
+﻿@model InterviewProfiler.Models.Question
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Question</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer50)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Answer50)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer100)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Answer100)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Meta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Meta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Modified)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Modified)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Skill)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Skill.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.QuestionId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
